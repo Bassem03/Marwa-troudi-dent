@@ -1,33 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calendar, Phone, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Determine styles based on scroll and page
-  const isTransparent = isHome && !scrolled;
-
-  const navClasses = `fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isTransparent
-    ? 'bg-transparent py-6 border-b border-white/10'
-    : 'bg-white/90 backdrop-blur-md shadow-lg py-4 border-b border-slate-100'
-    }`;
-
-  const textClass = isTransparent ? 'text-white' : 'text-slate-700';
-  const logoTextClass = isTransparent ? 'text-white' : 'text-slate-900';
-  const hoverClass = isTransparent ? 'hover:text-primary-light' : 'hover:text-primary';
+  const navClasses = `fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 transition-all duration-300 bg-[#f8f9fb]/95 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] rounded-full py-2.5 px-8 border border-black/100`;
 
   const links = [
     { name: 'Accueil', path: '/' },
@@ -39,49 +19,56 @@ const Navbar = () => {
 
   return (
     <nav className={navClasses}>
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="flex justify-between items-center w-full">
         {/* Logo */}
-        <Link to="/" className={`group text-xl md:text-2xl font-serif font-bold flex items-center gap-3 ${logoTextClass}`}>
-          <div className="relative">
-            <img src={`${import.meta.env.BASE_URL}tasnim-dent.jpg`} alt="Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain transition-transform duration-500 group-hover:scale-110" onError={(e) => e.target.style.display = 'none'} />
-            <div className="absolute -inset-2 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-          </div>
+        <Link to="/" className="group flex items-center gap-3">
+          <img
+            src={`${import.meta.env.BASE_URL}Manel-dent.jpg`}
+            alt="Logo"
+            className="w-10 h-10 md:w-11 md:h-11 object-contain mix-blend-multiply"
+            onError={(e) => e.target.style.display = 'none'}
+          />
           <div className="flex flex-col leading-tight">
-            <span className="text-xl md:text-2xl">Cabinet Dentaire</span>
-            <span className="text-sm md:text-lg opacity-80 font-sans font-medium">Dr. Tesnim Blel</span>
+            <span className="text-lg md:text-xl font-serif text-slate-800 font-medium tracking-wide">Cabinet dentaire</span>
+            <span className="text-[10px] md:text-xs text-slate-500 font-sans uppercase tracking-wider">Dr. Marwa Troudi</span>
           </div>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-8">
-          {links.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className={`text-sm font-medium transition-colors ${textClass} ${hoverClass} ${location.pathname === link.path ? (isTransparent ? 'text-white font-bold' : 'text-primary font-bold') : ''
-                }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+        <div className="hidden lg:flex items-center space-x-1">
+          {links.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`relative px-4 py-2 text-sm transition-colors ${isActive ? 'font-medium text-slate-800' : 'font-medium text-slate-500 hover:text-slate-800'
+                  }`}
+              >
+                {link.name}
+                {isActive && (
+                  <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#39938c] rounded-full" />
+                )}
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="hidden lg:flex items-center">
           <Link
             to="/contact"
-            className={`px-6 py-2.5 rounded-full font-medium transition-all shadow-lg flex items-center gap-2 ${isTransparent
-              ? 'bg-white text-secondary hover:bg-slate-100 shadow-white/10'
-              : 'bg-primary text-white hover:bg-primary-dark shadow-primary/30'
-              }`}
+            className="ml-4 px-6 py-2.5 bg-[#40968c] text-white rounded-full font-medium transition-colors hover:bg-[#327a72] text-sm shadow-sm"
           >
-            <Calendar size={18} />
             Prendre RDV
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className={`lg:hidden transition-colors ${textClass}`}
+          className="lg:hidden text-slate-700 p-2"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -89,27 +76,30 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-slate-100 overflow-hidden shadow-xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 w-full mt-4 bg-white rounded-[2rem] overflow-hidden shadow-xl border border-slate-100 lg:hidden"
           >
-            <div className="container mx-auto px-6 py-8 flex flex-col space-y-6">
-              {links.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium transition-colors ${location.pathname === link.path ? 'text-primary' : 'text-slate-600'
-                    } hover:text-primary`}
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <div className="p-6 flex flex-col space-y-4">
+              {links.map((link) => {
+                const isActive = location.pathname === link.path;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`text-base font-medium transition-colors ${isActive ? 'text-[#39938c]' : 'text-slate-600 hover:text-[#39938c]'
+                      }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="bg-primary text-white px-6 py-3 rounded-xl font-medium text-center shadow-lg shadow-primary/30"
+                className="bg-[#40968c] text-white px-6 py-3 rounded-full font-medium text-center shadow-sm mt-4 inline-block"
               >
                 Prendre un rendez-vous
               </Link>

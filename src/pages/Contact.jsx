@@ -64,7 +64,7 @@ const Contact = () => {
 
                             <div>
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 pl-4">Numéro de Téléphone</label>
-                                <input type="tel" className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-slate-800 font-medium" placeholder="99228686" />
+                                <input type="tel" className="w-full px-6 py-4 rounded-2xl bg-slate-50 border border-slate-100 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all text-slate-800 font-medium" placeholder="51 550 450" />
                             </div>
 
                             <div>
@@ -97,9 +97,9 @@ const Contact = () => {
                     >
                         {/* Info Cards - Stacked */}
                         {[
-                            { icon: Phone, title: "Appelez-nous", val: "99228686", sub: "Lun-Ven 8h-18h", color: "bg-blue-100 text-blue-600" },
-                            { icon: Mail, title: "Email", val: "drtesnimblel@gmail.com", sub: "Réponse sous 2 heures", color: "bg-emerald-100 text-emerald-600" },
-                            { icon: MapPin, title: "Visitez-nous", val: "Immeuble Salma 4, Sousse 4000", sub: "B17 Avenue Léopold Sédar Senghor, 1ere étage", color: "bg-purple-100 text-purple-600" }
+                            { icon: Phone, title: "Appelez-nous", val: "+216 51 550 450", sub: "Lun-Ven 8h-18h", color: "bg-blue-100 text-blue-600" },
+                            { icon: Mail, title: "Email", val: "marwa.dentiste@gmail.com", sub: "Réponse sous 2 heures", color: "bg-emerald-100 text-emerald-600" },
+                            { icon: MapPin, title: "Visitez-nous", val: "Av. Ibn Sina R6", sub: "Monastir, Tunisia, 5000", color: "bg-purple-100 text-purple-600" }
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
@@ -121,7 +121,7 @@ const Contact = () => {
                         <div className="w-full h-80 bg-slate-200 rounded-[2rem] overflow-hidden relative shadow-lg border-4 border-white">
                             <iframe
                                 title="Map Location"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.3414!2d10.6366!3d35.8256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130275727038e833%3A0xc3f92d43f07a9097!2sAv.+Yasser+Arafat%2C+Sousse!5e0!3m2!1sfr!2stn!4v1709506634732!5m2!1sfr!2stn"
+                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Av.%20Ibn%20Sina%20R6,%20Monastir,%20Tunisia+(Cabinet%20dentaire%20Dr.%20Marwa%20Troudi)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

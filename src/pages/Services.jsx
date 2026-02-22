@@ -18,7 +18,7 @@ const Services = () => {
                     className="text-center mb-24 max-w-3xl mx-auto"
                 >
                     <div className="inline-block p-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary-dark font-mono text-xs mb-4">
-                        // EXCELLENCE CLINIQUE
+                        EXCELLENCE CLINIQUE
                     </div>
                     <h1 className="text-5xl md:text-6xl font-serif text-slate-900 mb-6">Solutions <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Avancées</span></h1>
                     <p className="text-slate-500 text-lg leading-relaxed">

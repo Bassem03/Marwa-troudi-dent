@@ -1,12 +1,13 @@
 {
-  "homepage": "https://Bassem03.github.io/TasnimBlel-dent",
-  "name": "dent",
+  "homepage": "https://Bassem03.github.io/Marwa-troudi-dent",
+  "name": "Marwa-troudi-dent",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -r https://github.com/Bassem03/Marwa-troudi-dent.git",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

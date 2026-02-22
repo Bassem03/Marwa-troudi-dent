@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, Star, Clock, ShieldCheck, ArrowRight, HeartPulse, Stethoscope, Sparkles, Activity, Award, UserCheck } from 'lucide-react';
 import heroBg from '../assets/dent-background.jpg';
+import heroBg2 from '../assets/bg2.jpg';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -18,6 +19,7 @@ const fadeInUp = {
 };
 
 const Home = () => {
+
     const { scrollY } = useScroll();
     const heroY = useTransform(scrollY, [0, 500], [0, 100]);
     const bgY = useTransform(scrollY, [0, 500], [0, 50]); // Parallax for background
@@ -29,10 +31,11 @@ const Home = () => {
     const yFeatures = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
     return (
+
         <div className="w-full overflow-hidden bg-slate-50 selection:bg-primary/30">
 
             {/* HERO SECTION */}
-            <section className="relative min-h-screen flex items-center pt-32 pb-12 overflow-hidden">
+            <section className="relative min-h-[100dvh] md:min-h-screen flex items-center pt-32 pb-12 overflow-hidden">
                 {/* Background Image & Overlay with Parallax */}
                 <motion.div
                     style={{ y: bgY }}
@@ -41,10 +44,14 @@ const Home = () => {
                     <motion.img
                         src={heroBg}
                         alt="Hero Background"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center md:object-center origin-center"
                         initial={{ scale: 1.1 }}
-                        animate={{ scale: [1.1, 1.15, 1.1] }}
-                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        animate={{
+                            scale: [1.1, 1.2, 1.15, 1.1],
+                            x: ["0%", "-3%", "3%", "0%"],
+                            y: ["0%", "3%", "-2%", "0%"]
+                        }}
+                        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
                     />
                     <div className="absolute inset-0 bg-slate-900/30" /> {/* Dark overlay for readability */}
 
@@ -70,65 +77,64 @@ const Home = () => {
                     {/* Text Content */}
                     <motion.div
                         style={{ y: heroY, opacity: heroOpacity }}
-                        className="space-y-8 relative"
+                        className="space-y-6 md:space-y-8 relative flex flex-col items-center text-center md:items-start md:text-left mt-8 md:mt-0"
                     >
                         <motion.h1
                             variants={fadeInUp}
                             initial="hidden"
                             animate="visible"
                             custom={1}
-                            className="text-4xl sm:text-5xl lg:text-7xl font-serif font-medium text-white leading-[1.1] tracking-tight"
+                            className="text-[44px] sm:text-5xl lg:text-7xl font-serif font-medium text-white leading-[1.1] tracking-tight"
                         >
                             Souriez avec une <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-white to-indigo-300 animate-shimmer bg-[length:200%_auto]">Confiance Totale</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-white to-indigo-300 animate-shimmer bg-[length:200%_auto]">Confiance Totale</span> <br />
                         </motion.h1>
                         <motion.p
                             variants={fadeInUp}
                             initial="hidden"
                             animate="visible"
                             custom={2}
-                            className="text-xl text-slate-300 max-w-xl leading-relaxed font-light border-l-4 border-primary pl-6"
+                            className="text-[14px] md:text-xl text-slate-300 max-w-xl leading-relaxed font-light md:border-l-4 md:border-primary md:pl-6 px-2 md:px-0"
                         >
                             Redéfinir la dentisterie avec un mélange d'art, de science et de luxe.
                             Entrez dans un monde où votre confort est notre priorité et l'excellence est la norme.
-                        </motion.p>
+                        </motion.p> <br />
 
                         <motion.div
                             variants={fadeInUp}
                             initial="hidden"
                             animate="visible"
                             custom={3}
-                            className="flex flex-wrap gap-5 pt-4"
+                            className="flex flex-col w-full sm:flex-row sm:w-auto items-center justify-center md:justify-start gap-4 md:gap-5 pt-2"
                         >
-                            <Link to="/contact" className="group relative px-10 py-5 bg-gradient-to-r from-primary to-accent-purple text-white rounded-full font-bold text-lg overflow-hidden shadow-2xl shadow-primary/40 transition-all hover:scale-105 hover:shadow-primary/60">
+                            <Link to="/contact" className="w-full sm:w-auto flex justify-center group relative px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-primary to-accent-purple text-white rounded-full font-bold text-[17px] md:text-lg overflow-hidden shadow-2xl shadow-primary/40 transition-all hover:scale-105 hover:shadow-primary/60">
                                 <div className="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 ease-out skew-x-12 -ml-4" />
                                 <span className="relative z-10 flex items-center gap-2">
                                     Prendre RDV <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>
-                            <Link to="/services" className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-full font-bold text-lg hover:bg-white/10 hover:border-white/30 transition-all backdrop-blur-sm flex items-center gap-2">
+                            <Link to="/services" className="w-full sm:w-auto flex justify-center px-8 py-4 md:px-10 md:py-5 bg-white/5 border border-white/10 text-white rounded-full font-bold text-[17px] md:text-lg hover:bg-white/10 hover:border-white/30 transition-all backdrop-blur-sm items-center gap-2">
                                 <Calendar size={20} className="text-primary-glow" />
                                 Nos Services
                             </Link>
                         </motion.div>
 
-                        {/* Stats Strip */}
+                        {/* Feature List */}
                         <motion.div
                             variants={fadeInUp}
                             initial="hidden"
                             animate="visible"
                             custom={4}
-                            className="pt-12 grid grid-cols-3 gap-8 border-t border-white/10 mt-8"
+                            className="pt-8 flex flex-col items-center md:items-start gap-4 mt-8"
                         >
-
                             {[
-                                { val: "500+", label: "Sourires Créés", color: "text-primary-glow" },
-                                { val: "5  ans +", label: "Expérience", color: "text-white" },
-                                { val: "5.0", label: "Évaluation", color: "text-accent-gold" },
-                            ].map((stat, i) => (
-                                <div key={i} className="">
-                                    <div className={`text-4xl font-serif font-bold mb-1 ${stat.color}`}>{stat.val}</div>
-                                    <div className="text-sm text-slate-400 font-medium tracking-wide uppercase">{stat.label}</div>
+                                "500+ Sourires Créés",
+                                "5 ans + Expérience",
+                                "5.0 Évaluations sur Google",
+                            ].map((text, i) => (
+                                <div key={i} className="flex items-center gap-3">
+                                    <ShieldCheck size={22} className="text-[#39938c]" />
+                                    <span className="text-slate-200 font-medium md:text-lg">{text}</span>
                                 </div>
                             ))}
                         </motion.div>
@@ -147,7 +153,7 @@ const Home = () => {
                             className="absolute top-0 lg:top-20 right-0 w-full lg:w-[500px] h-full lg:h-[650px] rounded-[3rem] lg:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl shadow-primary/20 bg-secondary-surface/30 backdrop-blur-sm z-20 group"
                         >
                             <img
-                                src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3"
+                                src={heroBg2}
                                 alt="Professional Dentist"
                                 className="w-full h-full object-cover opacity-75 transition-transform duration-1000 group-hover:scale-110"
                             />
@@ -161,7 +167,7 @@ const Home = () => {
                                 className="absolute top-8 left-8 px-5 py-3 bg-secondary/60 backdrop-blur-md border border-white/10 rounded-2xl flex items-center gap-3 shadow-xl"
                             >
                                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
-                                <span className="text-white text-sm font-semibold tracking-wide">Ouvert jusqu'à 18:30h Sauf Samedi jusqu'à 15:00h</span>
+                                <span className="text-white text-sm font-semibold tracking-wide">Ouvert jusqu'à 16:00h Sauf Samedi jusqu'à 14:00h</span>
                             </motion.div>
                         </motion.div>
 
@@ -301,7 +307,7 @@ const Home = () => {
 
                         <h2 className="text-5xl md:text-7xl font-serif text-white mb-8">Votre plus beau sourire vous attend</h2>
                         <p className="text-xl text-primary-light mb-12 font-light max-w-2xl mx-auto">
-                            Ne vous contentez pas de la moyenne. Rejoignez les milliers de patients qui ont transformé leur vie avec le Dr. Tesnim Blel.
+                            Ne vous contentez pas de la moyenne. Rejoignez les milliers de patients qui ont transformé leur vie avec le Dr. Marwa Troudi.
                         </p>
                         <Link to="/contact" className="inline-block px-12 py-5 bg-white text-secondary font-bold rounded-full shadow-2xl shadow-white/20 hover:scale-105 transition-all text-lg">
                             Prendre RDV

@@ -26,7 +26,7 @@ const ScrollToTop = () => {
 
 const App = () => {
   return (
-    <Router basename="/TasnimBlel-dent/">
+    <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen bg-slate-50 font-sans text-slate-900">
         <Navbar />
