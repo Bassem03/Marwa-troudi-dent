@@ -167,7 +167,7 @@ const Home = () => {
                                 className="absolute top-8 left-8 px-5 py-3 bg-secondary/60 backdrop-blur-md border border-white/10 rounded-2xl flex items-center gap-3 shadow-xl"
                             >
                                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
-                                <span className="text-white text-sm font-semibold tracking-wide">Ouvert jusqu'à 16:00h Sauf Samedi jusqu'à 14:00h</span>
+                                <span className="text-white text-sm font-semibold tracking-wide">Ouvert jusqu'à 17:30h Sauf Samedi jusqu'à 15:00h</span>
                             </motion.div>
                         </motion.div>
 
@@ -307,7 +307,7 @@ const Home = () => {
 
                         <h2 className="text-5xl md:text-7xl font-serif text-white mb-8">Votre plus beau sourire vous attend</h2>
                         <p className="text-xl text-primary-light mb-12 font-light max-w-2xl mx-auto">
-                            Ne vous contentez pas de la moyenne. Rejoignez les milliers de patients qui ont transformé leur vie avec le Dr. Marwa Troudi.
+                            Ne vous contentez pas de la moyenne. Rejoignez les milliers de patients qui ont transformé leur vie avec le Dr. Firas Tabka.
                         </p>
                         <Link to="/contact" className="inline-block px-12 py-5 bg-white text-secondary font-bold rounded-full shadow-2xl shadow-white/20 hover:scale-105 transition-all text-lg">
                             Prendre RDV

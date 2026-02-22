@@ -45,7 +45,7 @@ const Reviews = () => {
                         <div className="flex items-center gap-6">
                             <div className="w-20 h-20 bg-blue-600 rounded-3xl flex items-center justify-center text-white font-bold text-3xl shadow-lg shadow-blue-500/30">G</div>
                             <div>
-                                <h2 className="text-2xl font-bold text-slate-800">Cabinet dentaire Dr. Marwa Troudi - Monastir</h2>
+                                <h2 className="text-2xl font-bold text-slate-800">Cabinet dentaire Dr. Firas Tabka - Monastir</h2>
                                 <div className="flex items-center gap-2 mt-1">
                                     <span className="text-slate-900 font-black text-2xl">4.9</span>
                                     <div className="flex text-amber-400 gap-0.5">
@@ -65,12 +65,12 @@ const Reviews = () => {
                 {/* Masonry Mock Reviews Grid */}
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                     {[
-                        { name: "Oumayma Besbes", date: "il y a plus de 3 mois", text: "Elle est très compétente, douce et souriante. Elle prend le temps d’expliquer chaque étape. Je suis très satisfaite de ses soins et je la recommande vivement.", bg: "bg-white" },
-                        { name: "Malika Mbarki", date: "il y a plus de 4 mois", text: "Excellente dentiste ! Dr Marwa est très professionnelle, douce et à l’écoute. Elle prend le temps d’expliquer chaque étape et fait son travail avec beaucoup de soin. Je suis très satisfaite du résultat, je la recommande vivementi", bg: "bg-primary text-white", dark: true },
-                        { name: "MERYEM EL ACHHAL", date: "il y a plus d'un ans'", text: "La prestation c’est bien passer avec beaucoup de professionnalisme et de savoir faire dr Marwa à su me mètre à l aise et m explique chaque étape à faire Le résultat et tout ce que j’attendais je voulais un effet naturel et le résultat était au rdv Je recommande dr Marwa", bg: "bg-white" },
-                        { name: "Eric Imberechts", date: "il y a plus de 3 ans", text: "Dentiste très professionnelle humaine prends à chaque à fois le temps d’expliquer au patient avant chaque procédure , je suis très content d’avoir choisi Docteur Marwa Troudi comme dentiste pour mes soins dentaire et plus précisément la mise en place des couronnes en zirconium tout s’est super bien passés pendant les soins elle est  à l’écoute de son patient très patiente à recommander en toute confiance. A notre prochaine visite à Monastir encore Merci", bg: "bg-white" },
-                        { name: "Nour Rebai", date: "il y a plus de 3 ans", text: "Je tenais à exprimer toute ma reconnaissance et ma profonde gratitude à Dr. Marwa Troudi pour son professionnalisme et son dévouement lors des soins qu'elle m'a apportés. Je suis très satisfaite 😊 …", bg: "bg-white" },
-                        { name: "Krifi Nawras", date: "il y a plus d'un an", text: "Compétence , professionnalisme et bonne écoute aux attentes des patients sont garantis dans ce cabinet dentaire👌👌 …", bg: "bg-secondary text-white", dark: true },
+                        { name: "Maria Angela Pereira", date: "il y a plus de 3 mois", text: "Merci beaucoup. Pour ma fille et moi. Pour les beaux travails que vous faites . Je suis un client fidèle. A chaque fois. Je vais me soigne chez vous em tounisi. monastir. j'habite en France. J'ai rien à dire le travail c'est bien fait. Je suis trop contente. Vous êtes bien reçu comme la famille. Je vous conseille. D'y aller, vous soignez là-bas. Très professionnel. Rien à dire 👏👏👏👏", bg: "bg-white" },
+                        { name: "Véro Diane", date: "il y a plus de 8 mois", text: "Très bon praticien merveilleux travail exécuté sur mon compagnon impossible de réaliser cella en France le cout est bien trop élevé Toujours avec délicatesse sérieux très à l'écoute de nos demandes ,explicite . Ce sont de très bons professionnels toute l'équipe est très sympathique et dévouée. Nous sommes très heureux d'avoir croisé la route du Docteur Firas Tabka Nous vous le recommandons à 200% Merci énormément à vous tous", bg: "bg-primary text-white", dark: true },
+                        { name: "Chris Mrz", date: "il y a plus d'un ans'", text: "Excellent docteur dentiste Firas Tabka pour ce très joli travail. Ravis d'être venus de France se faire soignés. Merci", bg: "bg-white" },
+                        { name: "ons zakraoui", date: "il y a plus d'un ans", text: "Excellent dentiste! Très professionnel et accueillant, je recommande vivement.", bg: "bg-white" },
+                        { name: "Lady Rover", date: "il y a plus de 9 mois", text: "Visite détartrage très agréable. Docteur compétent et sympa ainsi que ça collaboratrice.", bg: "bg-white" },
+                        { name: "Youssef", date: "il y a plus d'un an", text: "Docteur Firas est très professionnel..Je recommande vivement", bg: "bg-secondary text-white", dark: true },
                     ].map((review, i) => (
                         <motion.div
                             key={i}

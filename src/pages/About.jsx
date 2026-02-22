@@ -42,7 +42,7 @@ const About = () => {
                 <div className="grid md:grid-cols-3 gap-8 mb-24">
                     {[
                         {
-                            name: "Dr. Marwa Troudi",
+                            name: "Dr. Firas Tabka",
                             role: "Chirurgien Dentiste",
                             bio: "Expert en dentisterie esthétique avec plus de 15 ans d'expérience dans la transformation des sourires.",
                             gradient: "from-rose-500 to-orange-400",

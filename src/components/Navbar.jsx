@@ -30,7 +30,7 @@ const Navbar = () => {
           />
           <div className="flex flex-col leading-tight">
             <span className="text-lg md:text-xl font-serif text-slate-800 font-medium tracking-wide">Cabinet dentaire</span>
-            <span className="text-[10px] md:text-xs text-slate-500 font-sans uppercase tracking-wider">Dr. Marwa Troudi</span>
+            <span className="text-[10px] md:text-xs text-slate-500 font-sans uppercase tracking-wider">Dr. Firas Tabka</span>
           </div>
         </Link>
 

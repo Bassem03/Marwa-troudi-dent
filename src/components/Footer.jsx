@@ -11,7 +11,7 @@ const Footer = () => {
                         <img src={`${import.meta.env.BASE_URL}Manel-dent.jpg`} alt="Logo" className="w-20 h-20 object-contain bg-white rounded-2xl p-0.5 shadow-lg shadow-primary/20" onError={(e) => e.target.style.display = 'none'} />
                         <div className="flex flex-col leading-tight">
                             <h2 className="text-xl md:text-2xl font-serif font-bold text-primary">Cabinet dentaire</h2>
-                            <span className="text-slate-300 text-sm md:text-base font-medium">Dr. Marwa Troudi</span>
+                            <span className="text-slate-300 text-sm md:text-base font-medium">Dr. Firas Tabka</span>
                         </div>
                     </div>
                     <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
@@ -48,19 +48,19 @@ const Footer = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                                <span>Av. Ibn Sina R6, Monastir, Tunisia, 5000</span>
+                                <span>Immeuble Asma, Rue 14 janvier, Monastir 5000</span>
                             </li>
                             <li className="flex gap-2 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                 </svg>
-                                <span>+216 51 550 450</span>
+                                <span>+216 54 420 624</span>
                             </li>
                             <li className="flex gap-2 items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
-                                <span>marwa.dentiste@gmail.com</span>
+                                <span>Firas.Tabka@gmail.com</span>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-                    <p>&copy; {new Date().getFullYear()} Cabinet dentaire Dr. Marwa Troudi. Tous droits réservés.</p>
+                    <p>&copy; {new Date().getFullYear()} Cabinet dentaire Dr. Firas Tabka. Tous droits réservés.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link to="#" className="hover:text-cyan-400 transition-colors">Politique de Confidentialité</Link>
                         <Link to="#" className="hover:text-cyan-400 transition-colors">Conditions d'Utilisation</Link>
