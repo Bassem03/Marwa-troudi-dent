@@ -307,7 +307,7 @@ const Home = () => {
 
                         <h2 className="text-5xl md:text-7xl font-serif text-white mb-8">Votre plus beau sourire vous attend</h2>
                         <p className="text-xl text-primary-light mb-12 font-light max-w-2xl mx-auto">
-                            Ne vous contentez pas de la moyenne. Rejoignez les milliers de patients qui ont transformé leur vie avec le Dr. Firas Tabka.
+                            Ne vous contentez pas de la moyenne. Rejoignez les milliers de patients qui ont transformé leur vie avec le Dr. Amani Zerelli.
                         </p>
                         <Link to="/contact" className="inline-block px-12 py-5 bg-white text-secondary font-bold rounded-full shadow-2xl shadow-white/20 hover:scale-105 transition-all text-lg">
                             Prendre RDV

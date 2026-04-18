@@ -45,7 +45,7 @@ const Reviews = () => {
                         <div className="flex items-center gap-6">
                             <div className="w-20 h-20 bg-blue-600 rounded-3xl flex items-center justify-center text-white font-bold text-3xl shadow-lg shadow-blue-500/30">G</div>
                             <div>
-                                <h2 className="text-2xl font-bold text-slate-800">Cabinet dentaire Dr. Firas Tabka - Monastir</h2>
+                                <h2 className="text-2xl font-bold text-slate-800">Cabinet dentaire Dr. Amani Zerelli - Ariana</h2>
                                 <div className="flex items-center gap-2 mt-1">
                                     <span className="text-slate-900 font-black text-2xl">4.9</span>
                                     <div className="flex text-amber-400 gap-0.5">
@@ -65,12 +65,12 @@ const Reviews = () => {
                 {/* Masonry Mock Reviews Grid */}
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                     {[
-                        { name: "Maria Angela Pereira", date: "il y a plus de 3 mois", text: "Merci beaucoup. Pour ma fille et moi. Pour les beaux travails que vous faites . Je suis un client fidèle. A chaque fois. Je vais me soigne chez vous em tounisi. monastir. j'habite en France. J'ai rien à dire le travail c'est bien fait. Je suis trop contente. Vous êtes bien reçu comme la famille. Je vous conseille. D'y aller, vous soignez là-bas. Très professionnel. Rien à dire 👏👏👏👏", bg: "bg-white" },
-                        { name: "Véro Diane", date: "il y a plus de 8 mois", text: "Très bon praticien merveilleux travail exécuté sur mon compagnon impossible de réaliser cella en France le cout est bien trop élevé Toujours avec délicatesse sérieux très à l'écoute de nos demandes ,explicite . Ce sont de très bons professionnels toute l'équipe est très sympathique et dévouée. Nous sommes très heureux d'avoir croisé la route du Docteur Firas Tabka Nous vous le recommandons à 200% Merci énormément à vous tous", bg: "bg-primary text-white", dark: true },
-                        { name: "Chris Mrz", date: "il y a plus d'un ans'", text: "Excellent docteur dentiste Firas Tabka pour ce très joli travail. Ravis d'être venus de France se faire soignés. Merci", bg: "bg-white" },
-                        { name: "ons zakraoui", date: "il y a plus d'un ans", text: "Excellent dentiste! Très professionnel et accueillant, je recommande vivement.", bg: "bg-white" },
-                        { name: "Lady Rover", date: "il y a plus de 9 mois", text: "Visite détartrage très agréable. Docteur compétent et sympa ainsi que ça collaboratrice.", bg: "bg-white" },
-                        { name: "Youssef", date: "il y a plus d'un an", text: "Docteur Firas est très professionnel..Je recommande vivement", bg: "bg-secondary text-white", dark: true },
+                        { name: "Saw Ssen", date: "il y a plus de 3 ans", text: "Bravo docteur, très bon résultat, je suis très satisfaite .😍 C'est très bien d'avoir un docteur souriant et compétent👌", bg: "bg-white" },
+                        { name: "Alaa Rebei", date: "il y a plus de 3 ans", text: "Bravo docteur. Très bon résultat je suis très satisfait bonne continuation 😁 je recommande vivement", bg: "bg-primary text-white", dark: true },
+                        { name: "Carina Z.", date: "il y a plus d'un ans'", text: "J'ai eu une expérience positive pendant mes vacances. Excellent encadrement et traitement professionnel.", bg: "bg-white" },
+                        { name: "Ilef Zrelli", date: "il y a plus d'un ans", text: "Mon dentiste préféré. J'ai hâte de venir à mon rendez-vous de blanchiment des dents.", bg: "bg-white" },
+                        { name: "aymen hajejr", date: "il y a plus de 3 ans", text: "la meilleure dentiste en tunisie.", bg: "bg-white" },
+                        { name: "og kush", date: "il y a plus d'un an", text: "Dentiste très compétente , disponible sympathique et très efficace. Elle m'a fait un diagnostic objectif et sans avoir essayer de gratter des soins qui me servent à rien. Je vous la recommande vivement.", bg: "bg-secondary text-white", dark: true },
                     ].map((review, i) => (
                         <motion.div
                             key={i}
